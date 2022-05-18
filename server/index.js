@@ -1,6 +1,9 @@
-const { application } = require('express');
+// const { application } = require('express');
+const port = 5500
 const express = require('express');
 const path = require('path');
+
+require('dotenv').config()
 
 const app = express();
 
@@ -15,8 +18,7 @@ app.get("/styles", (req, res) => {
 })
 
 
-const port = process.env.PORT || 4005;
 
-app.listen(port => {
+app.listen(port, () => {
     console.log(`listening on ${port}`);
 })
